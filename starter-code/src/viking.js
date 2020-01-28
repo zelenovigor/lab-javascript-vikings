@@ -58,15 +58,42 @@ class War {
         this.saxonArmy[Math.floor(Math.random() * this.saxonArmy.length)].receiveDamage(this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)].strength);
         this.saxonArmy.filter(dead => dead.health <= 0 ? this.saxonArmy.splice(this.saxonArmy.indexOf(dead), 1) : 0);
         return `A Saxon has died in combat`;
+
+        // vikingAttack() {
+        // let randomSaxon = this.saxonArmy[Math.floor(Math.random() * this.saxonArmy.length)];
+        // let randomViking = this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)];
+        // let outcome = randomSaxon.receiveDamage(randomViking.strength);
+        //  if(outcome === 'A Saxon has died in combat') {
+        //     this.saxonArmy.splice(this.saxonArmy.indexOf(randomSaxon), 1);
+        // }
+        // return outcome;
+        // }
+
+
     };
     saxonAttack() {
         this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)].receiveDamage(this.saxonArmy[Math.floor(Math.random() * this.saxonArmy.length)].strength);
         this.vikingArmy.filter(dead => dead.health <= 0 ? this.vikingArmy.splice(this.vikingArmy.indexOf(dead), 1) : 0);
         return `Harald has received 25 points of damage`;
     };
+
+        // saxonAttack() {
+        // let randomSaxon = this.saxonArmy[Math.floor(Math.random() * this.saxonArmy.length)];
+        // let randomViking = this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)];
+        // let outcome = randomSaxon.receiveDamage(randomViking.strength);
+        //  if(outcome === 'A Saxon has died in combat') {
+        //     this.saxonArmy.splice(this.saxonArmy.indexOf(randomSaxon), 1);
+        // }
+        // return outcome;
+        // }
+
     showStatus() {
         if (this.saxonArmy.length <= 0) {return `Vikings have won the war of the century!`};
         if (this.vikingArmy.length <= 0) {return `Saxons have fought for their lives and survived another day...`};
         if (this.vikingArmy.length && this.saxonArmy.length >= 0) {return `Vikings and Saxons are still in the thick of battle.`}
     };
+}
+
+showStatus() {
+    if (this.saxonArmy)
 }
